@@ -27,3 +27,20 @@ console.log(typeof num)
 let ChangeIntoString = String(num)
 console.log(typeof ChangeIntoString);
 console.log(ChangeIntoString);
+
+//operations//
+let value = 3
+let negValue= -value;
+console.log(negValue);
+
+// adding two string
+let str1 = "Hello";
+let str2 = "Bittu";
+let str3 = str1 + str2;
+console.log(str3);
+
+//adding string and number
+let name = "Bittu";
+let age = 21;
+let information= name+age;
+console.log(information);
