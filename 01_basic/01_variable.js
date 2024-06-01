@@ -8,7 +8,7 @@ accountCity = "Jaipur"// if there we do not declare any variable so it is automa
 accountEmail = "bitturajput202019@gmail.com"
 accountPassword = 3546
 accountCity = "delhi"
-console.log("shubham singh ajsksfjhaddkhskjdhak")
+console.log("shubham singh ")
 
 
 console.log(accountID);
