@@ -18,7 +18,7 @@ console.log(User1);
 
 let User2 = User1
 
-User2.Email="BittuRajput202019@gmail.com"
+User2.Email = "BittuRajput202019@gmail.com"
 console.log(User1.Email)
 console.log(User2.Email)
 //In heap sort it store data by refrence value it stores only one value at a time
