@@ -42,9 +42,9 @@ function Details(user) {
 }
 Details(user)
 
-const newArray=[100,200,300,400,500]
+const newArray = [100, 200, 300, 400, 500]
 
-function returnsecondvalue(getArray){
+function returnsecondvalue(getArray) {
   return getArray[1]
 }
 console.log(returnsecondvalue(newArray))
