@@ -1,0 +1,24 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.container {
+  text-align: center;
+}
+.color-box {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: #3498db;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.color-box:hover {
+  transform: scale(1.1);
+}
