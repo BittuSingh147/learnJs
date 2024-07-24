@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button, input, div {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: lightgray;
+        }
+        #myImage {
+            width: 200px;
+            height: 200px;
+            display: block; /* Initially visible */
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Handling Example</h1>
+
+    <!-- Click Event -->
+    <button id="clickButton">Click Me</button>
+    <p id="paragraph">this is old paragraph</p>
+    <button id="toggleButton">Toggle Image</button>
+    <img id="myImage" src="01.png" alt="Sample Image">
+
+    <!-- Mouseover Event -->
+    <div id="mouseoverBox" class="box">Hover over me!</div>
+
+    <!-- Keypress Event -->
+    <input type="text" id="keypressInput" placeholder="Type something...">
+    <p id="message"></p>
+
+    <!-- Form submit Event -->
+    <form id="form">
+        <label>Test field: <input type="text" /></label>
+        <br /><br />
+        <button type="submit">Submit form</button>
+      </form>
+      <p id="log"></p>
+<!-- Change dropdown Event -->
+      <label>
+        Choose an ice cream flavor:
+        <select class="ice-cream" name="ice-cream">
+          <option value="">Select One …</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="sardine">Sardine</option>
+          <option value="vanilla">Vanilla</option>
+        </select>
+      </label>
+      
+      <div class="result"></div>
+
+      <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+
+    <div id="parent">
+        <!-- Dynamic child elements will be added here -->
+    </div>
+    <button id="addItemButton">Add Item</button>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
