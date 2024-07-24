@@ -2,9 +2,8 @@
 //Task 1 Create a promises that resolves with a message after a 2-second timeout and log the message into the console.
 const mypromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve('Message recieved after 2 seconds')
+    resolve("Message recieved after 2 seconds");
   }, 2000);
-
 });
 mypromise.then((message) => {
   console.log(message);
@@ -13,7 +12,7 @@ mypromise.then((message) => {
 //Task 2 Create a promise that rejects with an error message after a 2 second timeout and handle the error message using.catch()
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    reject('Something went wrong!');
+    reject("Something went wrong!");
   }, 2000);
 });
 
@@ -25,40 +24,39 @@ myPromise
     console.log(error);
   });
 
-
 //Activity 2 Chaining Promises
 //Task 3 Create a sequence of promises that simulate fetching data from a server.chain the promises to log the message in specific order
 function fetchdatafromserver(step) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(`data from step${step}`)
+      resolve(`data from step${step}`);
     }, 2000);
-  })
+  });
 }
 fetchdatafromserver(1)
   .then((message1) => {
     console.log(message1);
-    return fetchdatafromserver(2)
+    return fetchdatafromserver(2);
   })
   .then((message2) => {
     console.log(message2);
-    return fetchdatafromserver(3)
+    return fetchdatafromserver(3);
   })
   .then((message3) => {
     console.log(message3);
   })
   .catch((error) => {
     console.log(`error:`, error);
-  })
+  });
 
 //Activity 3 Using Async/Await
 //Task 4 Write an async function that waits for a promises to resolve and then logs the resolved value
 function fetchdata() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('Data is ready!')
+      resolve("Data is ready!");
     }, 2000);
-  })
+  });
 }
 
 async function logdata() {
@@ -68,31 +66,26 @@ async function logdata() {
   } catch (error) {
     console.log(`error:`, error);
   }
-
 }
 logdata();
-
 
 //Task 5 Write an async function that handdles a rejected promise using try-catch and logs the error message
 function data() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject('something went wrong')
+      reject("something went wrong");
     }, 1000);
-  })
+  });
 }
 async function logsdata() {
   try {
     const results = await data();
     console.log(results);
-
   } catch (error) {
     console.log(`error:`, error);
-
   }
 }
-logsdata()
-
+logsdata();
 
 //Activity 4 fetching Data from an ApI
 //Task 6 use the fetch API to get data from a public API and log the response data to the console using promises
@@ -112,7 +105,6 @@ logsdata()
 //  .catch(error =>{
 //   console.error('There was a problem with the fetch operation:', error);
 //  })
-
 
 //Task 7 Use the fetch API to get data from public API and log the response data to the console using async/await
 // Declare the apiURL variable first
@@ -176,24 +168,25 @@ logsdata()
 //Task 9 Use promise.race to log the value of the first promise that resolves among multiple promises
 const promise1 = new Promise((resolve) => {
   setTimeout(() => {
-    resolve('Result from promise 1');
+    resolve("Result from promise 1");
   }, 2000); // Resolves after 2 seconds
 });
 
 const promise2 = new Promise((resolve) => {
   setTimeout(() => {
-    resolve('Result from promise 2');
+    resolve("Result from promise 2");
   }, 1000); // Resolves after 1 second
 });
 
 const promise3 = new Promise((resolve) => {
   setTimeout(() => {
-    resolve('Result from promise 3');
+    resolve("Result from promise 3");
   }, 3000); // Resolves after 3 seconds
 });
 Promise.race([promise1, promise2, promise3])
   .then((result) => {
-    console.log('The first resolved promise result', result);
-  }).catch((error) => {
-    console.log('error occured', error);
+    console.log("The first resolved promise result", result);
   })
+  .catch((error) => {
+    console.log("error occured", error);
+  });
