@@ -74,3 +74,57 @@ console.log(reverseString("world"));
 console.log(reverseString("JavaScript")); 
 console.log(reverseString("")); 
 console.log(reverseString("a")); 
+
+//Task 6:Write a recursive function to check if string is palindrome .Log the result for few cases.
+function isPalindrome(str) {
+  if (str.length <= 1) {
+    return true;
+  }
+  if (str[0] !== str[str.length - 1]) {
+    return false;
+  }
+  return isPalindrome(str.slice(1, -1));
+}
+console.log(isPalindrome("racecar")); 
+console.log(isPalindrome("hello")); 
+console.log(isPalindrome("madam")); 
+console.log(isPalindrome("a")); 
+console.log(isPalindrome("")); 
+console.log(isPalindrome("abccba")); 
+console.log(isPalindrome("abcd")); 
+
+//Activity 4 Recursive search
+//Task 7 : Write a recursive function to perform a binary search on a sorted array .log the index of a target elements for a few test.
+function binarySearch(arr, target, left = 0, right = arr.length - 1) {
+  // Base case: if the range is invalid, the target is not present
+  if (left > right) {
+    return -1;
+  }
+
+  // Find the middle index
+  const mid = Math.floor((left + right) / 2);
+
+  // Check if the middle element is the target
+  if (arr[mid] === target) {
+    return mid;
+  }
+
+  // If the target is less than the middle element, search in the left half
+  if (arr[mid] > target) {
+    return binarySearch(arr, target, left, mid - 1);
+  }
+
+  // If the target is greater than the middle element, search in the right half
+  return binarySearch(arr, target, mid + 1, right);
+}
+
+
+console.log(binarySearch([1, 2, 3, 4, 5], 3)); // 2
+console.log(binarySearch([1, 2, 3, 4, 5], 1)); // 0
+console.log(binarySearch([1, 2, 3, 4, 5], 5)); // 4
+console.log(binarySearch([1, 2, 3, 4, 5], 0)); // -1
+console.log(binarySearch([1, 2, 3, 4, 5], 6)); // -1
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)); // 6
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10)); // 9
+console.log(binarySearch([], 1)); // -1
+
