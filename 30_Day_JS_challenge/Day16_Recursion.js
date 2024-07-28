@@ -42,3 +42,35 @@ console.log(sumofarray([]));
 console.log(sumofarray([7, -2, 5, 3]));
 console.log(sumofarray([100, 200, 300, 400]));
 
+//Task 4 : Write a recursive function to find the maximum element in array .Log the result for console.
+function findMax(arr) {
+
+  if (arr.length === 1) {
+    return arr[0];
+  }
+
+  let restMax = findMax(arr.slice(1));
+
+  return arr[0] > restMax ? arr[0] : restMax;
+}
+
+
+console.log(findMax([1, 2, 3, 4, 5]));
+console.log(findMax([10, 20, 30]));
+console.log(findMax([-10, -20, -30, -5]));
+console.log(findMax([7, 3, 5, 9, 6]));
+console.log(findMax([100, 200, 300, 50])); 
+
+//Activity 3 String Manipulation with recursion
+//Task 5:Write a recursive function to reverse a string .Log the result for few test cases.
+function reverseString(str) {
+  if (str.length <= 1) {
+    return str;
+  }
+  return reverseString(str.slice(1)) + str[0];
+}
+console.log(reverseString("hello")); 
+console.log(reverseString("world")); 
+console.log(reverseString("JavaScript")); 
+console.log(reverseString("")); 
+console.log(reverseString("a")); 
